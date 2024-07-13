@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --pink: hsl(322, 100%, 66%);
+  --light-pink: hsl(321, 100%, 78%);
+  --light-red: hsl(0, 100%, 63%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --pale-blue: hsl(207, 100%, 98%);
+  --poppins: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--dark-cyan);
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+img {
+  width: 100%;
+  margin: 0;
+  display: block;
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+  display: inline-block;
+}
+
+.pink-link {
+  padding: 0.8em 3em;
+  background: var(--pink);
+  color: var(--pale-blue);
+  font-weight: 600;
+  margin-top: 30px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  transition: 0.3s;
+}
+.pink-link:hover {
+  background: var(--light-pink);
+}
+
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  width: 125px;
+}
+.header-link {
+  color: var(--pink);
+  padding: 5px 16px;
+  border-radius: 20px;
+  border: 1px solid;
+  font-size: 14px;
+}
+.header-link:hover {
+  color: var(--light-pink);
+}
+
+.intro {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.intro-title {
+  font-family: var(--poppins);
+}
+.intro-paragraph {
+  font-size: 13px;
+}
+.intro-image {
+  width: 100%;
+  margin-top: 90px;
+}
+
+.stats {
+  padding-bottom: 60px;
+}
+.stats .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.stats-item + .stats-item {
+  margin-top: 70px;
+}
+.stats-icon {
+  margin-right: auto;
+  width: 30px;
+}
+.stats-number {
+  font-size: 50px;
+  margin: 0;
+}
+.stats-label {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #999;
+}
+
+.section.blue {
+  background: var(--pale-blue);
+}
+.section.add-vertical-margin {
+  margin: 60px 0;
+}
+
+.section {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.section-title {
+  font-family: var(--poppins);
+  font-size: 22px;
+  margin-top: 40px;
+}
+.section-paragraph {
+  font-size: 12px;
+}
+
+.end-section {
+  text-align: center;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+.end-section-title {
+  font-family: var(--poppins);
+}
+
+.footer {
+  background: var(--dark-cyan);
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.newsletter {
+  display: flex;
+  flex-direction: column;
+}
+.newsletter-title {
+  margin: 0;
+}
+.newsletter-paragraph {
+  font-size: 13px;
+}
+.newsletter-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+.newsletter-input:focus {
+  outline: 2px solid var(--light-pink);
+}
+.newsletter-button {
+  background: var(--pink);
+  border: 0;
+  font-family: inherit;
+  color: inherit;
+  font-weight: 600;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 8px 25px;
+  margin-top: 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.newsletter-button:hover {
+  background: var(--light-pink);
+}
+
+.company {
+  margin-top: 60px;
+}
+.company-logo {
+  transform: scale(0.7);
+  transform-origin: left;
+}
+.company-logo path {
+  fill: white;
+}
+.company-paragraph {
+  font-size: 13px;
+}
+
+.contact-item {
+  display: flex;
+  font-size: 13px;
+}
+.contact-icon {
+  width: 15px;
+  object-fit: contain;
+}
+.contact-detail {
+  margin-left: 16px;
+}
+
+.sosmed {
+  margin-top: 40px;
+}
+.sosmed-link + .sosmed-link {
+  margin-left: 10px;
+}
+.sosmed-link ion-icon {
+  font-size: 25px;
+}
+.sosmed-link:hover {
+  color: lightblue;
+}
+
+@media screen and (min-width: 1024px) {
+  .pink-link {
+    font-size: 16px;
+  }
+  .wrapper {
+    max-width: 64rem;
+  }
+
+  .intro-title {
+    font-size: 35px;
+  }
+  .intro-paragraph {
+    max-width: 450px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+  .intro-image {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stats .wrapper {
+    flex-direction: row;
+  }
+  .stats-item + .stats-item {
+    margin-top: 0;
+  }
+  .stats-number {
+    font-size: 60px;
+  }
+  .stats-label {
+    font-size: 18px;
+  }
+
+  .section {
+    text-align: left;
+  }
+
+  .section.img-right .section-image {
+    order: 2;
+  }
+  .section.img-right .section-content {
+    margin-right: 60px;
+  }
+
+  .section.img-left .section-content {
+    margin-left: 60px;
+  }
+
+  .section .wrapper {
+    flex-direction: row;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+  .section-paragraph {
+    font-size: 15px;
+  }
+  .section-image {
+    max-width: 50%;
+  }
+
+  .end-section {
+    padding-top: 100px;
+  }
+  .end-section-title {
+    font-size: 35px;
+  }
+
+  .footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-details {
+    max-width: 300px;
+    margin-right: 200px;
+  }
+  .newsletter {
+    order: 2;
+  }
+  .newsletter-paragraph {
+    max-width: 300px;
+  }
+  .newsletter-form {
+    display: flex;
+    align-items: center;
+  }
+  .newsletter-input {
+    min-width: 250px;
+  }
+  .newsletter-button {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .company {
+    margin-top: 0;
+  }
+}
